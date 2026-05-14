@@ -14,18 +14,20 @@
     background: #0a0806;
     color: #e8e0d8;
     line-height: 1.7;
-    background-image: url('imagens/fundo.jpg');
-    background-repeat: repeat;
-    background-size: 400px;
-    background-blend-mode: overlay;
+    background-image: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url('imagens/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
+  }
+  }
   }
 
   body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background: rgba(10,8,6,0.88);
+    background: rgba(10,8,6,0.02);
     pointer-events: none;
     z-index: 0;
   }
@@ -94,21 +96,34 @@
     font-family: inherit;
   }
   .btn-primary {
-    background: linear-gradient(135deg, #c9a87e, #b8956a);
-    color: #0a0806;
+    background: linear-gradient(135deg, #f7e8a0 0%, #d4af37 40%, #b8860b 60%, #f7e8a0 100%);
+    background-size: 200% 200%;
+    color: #2a1f0a;
+    font-weight: 700;
+    border: 1px solid rgba(247,232,160,0.25);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.15);
+    box-shadow: 0 4px 20px rgba(212,175,55,0.15);
   }
   .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(201,168,126,0.15);
+    background-position: right center;
+    box-shadow: 0 8px 40px rgba(212,175,55,0.35);
+    transform: translateY(-4px);
+    border-color: rgba(247,232,160,0.4);
   }
   .btn-secondary {
-    background: rgba(255,255,255,0.04);
-    color: #e8e0d8;
-    border: 1px solid rgba(201,168,126,0.15);
+    background: linear-gradient(135deg, #e8d48a 0%, #c9a040 50%, #e8d48a 100%);
+    background-size: 200% 200%;
+    color: #2a1f0a;
+    font-weight: 700;
+    border: 1px solid rgba(247,232,160,0.2);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.1);
+    box-shadow: 0 4px 20px rgba(212,175,55,0.12);
   }
   .btn-secondary:hover {
-    background: rgba(255,255,255,0.08);
-    transform: translateY(-3px);
+    background-position: right center;
+    box-shadow: 0 8px 40px rgba(212,175,55,0.3);
+    transform: translateY(-4px);
+    border-color: rgba(247,232,160,0.35);
   }
 
   /* ABOUT */
@@ -387,17 +402,23 @@
     padding: 16px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(135deg, #c9a87e, #b8956a);
-    color: #0a0806;
+    background: linear-gradient(135deg, #f7e8a0 0%, #d4af37 40%, #b8860b 60%, #f7e8a0 100%);
+    background-size: 200% 200%;
+    color: #2a1f0a;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
     letter-spacing: 1px;
     text-transform: uppercase;
+    border: 1px solid rgba(247,232,160,0.25);
+    box-shadow: 0 4px 20px rgba(212,175,55,0.15);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.15);
   }
   .prayer-form button:hover {
-    opacity: 0.85;
+    background-position: right center;
+    box-shadow: 0 8px 40px rgba(212,175,55,0.35);
+    opacity: 1;
   }
   .prayer-form .success-msg {
     display: none;
